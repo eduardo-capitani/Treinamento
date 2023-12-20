@@ -1,0 +1,21 @@
+{
+    "labels": {
+        "username": "Usuário",
+        "password": "Senha"
+    },
+    "placeholders": {
+        "search": "Pesquisar",
+        "select": "Selecione",
+        "username": "Usuário",
+        "password": "Senha"
+    },
+    "errors": {
+        "required-field": "Campo obrigatório.",
+        "invalid-credentials": "Usuário ou senha inválidos.",
+        "location_service_disabled": "Habilite o serviço de localização para continuar.",
+        "permission_enabling": "Ajuste a permissão de localização para 'Sempre' nas configurações do aplicativo.",
+        "user_denied_access": "Você não tem permissão para acessar o aplicativo. Entre em contato com o administrador.",
+        "user_without_local": "Você não possui um local cadastrado. Entre em contato com o administrador.",
+        "account-temporarily-blocked": "Conta temporariamente bloqueada."
+    }
+}
