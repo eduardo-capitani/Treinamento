@@ -11,7 +11,7 @@ import 'package:tupy_framework/ui.dart';
 import 'configuration/stage_configuration.dart';
 
 void main() async {
-  const appEnv = String.fromEnvironment('APP_ENV', defaultValue: 'prod');
+  const appEnv = String.fromEnvironment('APP_ENV', defaultValue: 'stage');
   log('====>> APP_ENV: $appEnv');
   AppConfig appConfig;
   switch (appEnv) {

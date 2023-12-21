@@ -5,6 +5,6 @@ class ProductionConfiguration extends AppConfig {
       : super(
           type: AppType.production,
           values:
-              AppValues(apiUrl: 'https://portal1-qas.tupy.com.br/ApontamentoRefugoMob/rest'),
+              AppValues(apiUrl: 'http://portal1.tupy.com.br/ApontamentoRefugoMob/rest'),
         );
 }

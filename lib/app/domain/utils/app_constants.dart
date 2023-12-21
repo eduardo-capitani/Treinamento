@@ -11,6 +11,6 @@ class AppConstants {
   static String get PRODUCTION_HEADER => 'preferences_scrap';
   static String get EXTERNOCONSTANT => 'REFUGOEXTERNO';
   static String get INTERNOCONSTANT => 'REFUGOINTERNO';
-
+  static String get LOCAL_STORAGE_LAST_SYNC_KEY => 'lastSync';
   static String get key => '+MbQeThWmZq4t7w!z%C*F-J@NcRfUjXn';
 }

@@ -9,7 +9,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'MES PEE',
+      title: 'Treinamento',
       theme: AppTheme.getLightTheme,
       routerDelegate: Modular.routerDelegate,
       routeInformationParser: Modular.routeInformationParser,

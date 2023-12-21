@@ -5,6 +5,6 @@ class StageConfiguration extends AppConfig {
       : super(
           type: AppType.stage,
           values:
-              AppValues(apiUrl: 'https://portal1-qas.tupy.com.br/ApontamentoRefugoMob/rest'),
+              AppValues(apiUrl: 'http://portal1-qas.tupy.com.br/ApontamentoRefugoMob/rest'),
         );
 }
