@@ -21,6 +21,28 @@ class _AppointmentsPageState extends State<AppointmentsPage> {
 
   @override
   Widget build(BuildContext context) {
+    var headers = [
+      'Data de fundição',
+      'Turno',
+      'Nº Molde',
+      'Modelo',
+      'Cód. Defeito',
+      'Macharia',
+      'Ferramental',
+      'Destino',
+      'Ação'
+    ];
+
+    var data = AppointmentsStore.instance.value;
+
+    List<TableRow> rows = data.map((item) {
+      return TableRow(
+        children: headers.map((header) {
+          return Text(item.indexOf(header).toString());
+        }).toList(),
+      );
+    }).toList();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Apontamentos'),
@@ -28,48 +50,21 @@ class _AppointmentsPageState extends State<AppointmentsPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-            Padding(
+          Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 23.0,
             ),
             child: ValueListenableBuilder(
               valueListenable: AppointmentsStore.instance,
               child: Table(
-                columnWidths: const {
-                  0: FlexColumnWidth(1),
+                columnWidths: const <int, TableColumnWidth>{
+                  0: IntrinsicColumnWidth(),
                   1: FlexColumnWidth(1),
-                  2: FlexColumnWidth(1),
-                  3: FlexColumnWidth(1),
-                  4: FlexColumnWidth(1),
-                  5: FlexColumnWidth(1),
-
-                  // Defina a largura para mais colunas conforme necessário
+                  2: FixedColumnWidth(100),
+                  // Adicione mais conforme necessário
                 },
-                children: const [
-                  TableRow(
-                    children: [
-                      Text('Data de fundição'),
-                      Text('Turno'),
-                      Text('Nº Molde'),
-                      Text('Modelo'),
-                      Text('Cód. Defeito'),
-                      Text('Macharia'),
-
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      Text('Valor 1'),
-                      Text('Valor 2'),
-                      Text('Valor 3'),
-                      Text('Valor 1'),
-                      Text('Valor 2'),
-                      Text('Valor 3'),
-
-                    ],
-                  ),
-                  // Adicione mais TableRow para cada linha de dados
-                ],
+                border: TableBorder.all(color: Colors.black),
+                children: rows,
               ),
               builder: (context, value, child) {
                 return child!;
